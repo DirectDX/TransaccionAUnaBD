@@ -1,0 +1,36 @@
+2024-02-23 17:24:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL)[*], DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL,CONTRASEÑA VARCHAR(50) NOT NULL"
+Syntax error in SQL statement "CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL)[*], DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL,CONTRASEÑA VARCHAR(50) NOT NULL"; SQL statement:
+CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL), DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL,CONTRASEÑA VARCHAR(50) NOT NULL [42000-214]
+2024-02-23 17:26:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL)[*], DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL, CONTRASEÑA VARCHAR(50) NOT NULL"
+Syntax error in SQL statement "CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL)[*], DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL, CONTRASEÑA VARCHAR(50) NOT NULL"; SQL statement:
+CREATE TABLE PACIENTE (ID INT PRIMARY KEY, NOMBRE VARCHAR(50) NOT NULL, APELLIDO VARCHAR(50) NOT NULL), DOMICILIO VARCHAR(50) NOT NULL, DNI INT NOT NULL, FECHA_DE_ALTA DATE NOT NULL, USUARIO VARCHAR(50) NOT NULL, CONTRASEÑA VARCHAR(50) NOT NULL [42000-214]
+2024-02-23 17:45:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor Invalido "8" para el parametro "parameterIndex"
+Invalid value "8" for parameter "parameterIndex" [90008-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:646)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:298)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1395)
+	at org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:378)
+	at Main.main(Main.java:35)
+2024-02-23 17:46:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+INSERT INTO PACIENTE (ID ,NOMBRE, APELLIDO, DOMICILIO, DNI, FECHA_DE_ALTA, USUARIO, CONTRASEÑA) VALUES (?,?,?,?,?,?,?) [21002-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:295)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:575)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
+	at Main.main(Main.java:27)
